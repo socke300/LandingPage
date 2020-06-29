@@ -95,7 +95,7 @@
                         <div class="device">
                             <div class="screen">
                                 <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                <img src="img/ArsnovaClick-Frage-iPhone.png" class="img-fluid" alt="">
+                                <img src="img/dia/ArsnovaClick-Frage-iPhone.png" class="img-fluid" name="slide">
                             </div>
                             <div class="button">
                                 <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -161,10 +161,9 @@
                     <div class="device-mockup iMac portrait white">
                         <div class="device">
                             <div class="screen">
-                                <img src="img/ArsnovaClick-iMac.png" class="img-fluid" alt="">
+                                <img src="img/dia/ArsnovaClick-iMac.png" class="img-fluid">
                             </div>
                             <div class="button">
-
                             </div>
                         </div>
                     </div>
@@ -176,7 +175,7 @@
                         <div class="device">
                             <div class="screen">
                                 <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                <img src="img/ArsnovaClick-iMac.png" class="img-fluid" alt="">
+                                <img src="img/dia/ArsnovaClick-iMac.png" class="img-fluid">
                             </div>
                             <div class="button">
                                 <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -193,7 +192,7 @@
                         <div class="device">
                             <div class="screen">
                                 <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
-                                <img src="img/ArsnovaClick-iMac.png" class="img-fluid" alt="">
+                                <img src="img/dia/ArsnovaClick-iMac.png" class="img-fluid">
                             </div>
                             <div class="button">
                                 <!-- You can hook the "home button" to some JavaScript events or just remove it -->
@@ -207,7 +206,7 @@
                     <div class="device-mockup imac portrait white">
                         <div class="device">
                             <div class="screen">
-                                <img src="img/ArsnovaClick-iMac.png" class="img-fluid" alt="">
+                                <img src="img/dia/ArsnovaClick-iMac.png" class="img-fluid">
                             </div>
                         </div>
                     </div>
@@ -335,5 +334,22 @@
         easing: "easeOutExpo",
         delay: 1000
     });
+</script>
+<script language="JavaScript">
+    var i = 0; var path = new Array();
+
+    // LIST OF IMAGES
+    path[0] = "img/dia/ArsnovaClick-Frage-iPhone.png";
+    path[1] = "img/dia/ArsnovaClick-iPhone.png";
+    path[2] = "img/dia/ArsnovaClick-iPhone2.png";
+
+    function swapImage()
+    {
+        document.slide.src = path[i];
+        if(i < path.length - 1) i++;
+        else i = 0;
+        setTimeout("swapImage()",3000);
+    }
+    window.onload=swapImage;
 </script>
 </html>
